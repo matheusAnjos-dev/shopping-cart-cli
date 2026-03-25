@@ -6,6 +6,8 @@ public class Pedido {
     private Carrinho carrinho;
     private Pagamento pagamento;
 
+    public Pedido(Carrinho c , Pedido p){}
+
     public void finalizar(){
         System.out.println("Pagamento finalizado.");
     }
