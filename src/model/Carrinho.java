@@ -34,6 +34,7 @@ public class Carrinho {
             for(Produto p : carrinhoList) {
                 System.out.println(p.getId() + " - Produto:" + p.getNome() + " | Preço:R$" + p.getPreco());}
 
+
             }
 
     }
