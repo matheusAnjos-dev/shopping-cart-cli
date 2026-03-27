@@ -34,7 +34,6 @@ public class Main {
             opcao = sc.nextInt();
             switch (opcao){
                 case 1:
-                    Produto p = new Produto();
                     //entrySet() retorna todos os pares do Map
                     for(Map.Entry<Integer,Produto> entry : catalogo.entrySet()){
                         Produto prod = entry.getValue();
