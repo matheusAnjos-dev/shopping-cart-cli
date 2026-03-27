@@ -27,8 +27,8 @@ public class Main {
         do {
             System.out.println("\n=== Menu ===");
             System.out.println("1 - Adicionar produto");
-            System.out.println("2 - Listar produto");
-            System.out.println("3 - Remover produto");
+            System.out.println("2 - Listar produtos no carrinho");
+            System.out.println("3 - Remover produto do carrinho");
             System.out.println("4 - Finalizar compra");
 
             opcao = sc.nextInt();
@@ -53,7 +53,6 @@ public class Main {
                     break;
                 case 2:
                     carrinho.listarCarrinho();
-                    //adicionar total aqui
                     break;
                 case 3:
                     System.out.println("Selecione qual produto deseja remover pelo ID");
@@ -61,11 +60,11 @@ public class Main {
                     carrinho.remover(idRemover);
                     break;
                 case 4:
-                    System.out.println("Selecione uma forma de pagamento:\n " +
-                            "1 - Boleto\n" +
+                    System.out.println("Selecione uma forma de pagamento:\n" +
+                            "1 - Pix\n" +
                             "2 - Cartão de Crédito\n" +
-                            "3 - Pix");
-                    int formaPagamento = sc.nextInt();
+                            "3 - Boleto");
+                    int formaPagamento = sc.nextInt(); 
                     try {
                         Pagamento pagamento = PagamentoFactory.criar(formaPagamento);
                         Pedido pedido = new Pedido(carrinho, pagamento);

@@ -33,9 +33,8 @@ public class Carrinho {
         else{
             for(Produto p : carrinhoList) {
                 System.out.println(p.getId() + " - Produto:" + p.getNome() + " | Preço:R$" + p.getPreco());}
-
-
             }
+        System.out.println("Total: R$" + calcularTotal());
 
     }
 
